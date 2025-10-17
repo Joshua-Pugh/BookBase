@@ -14,11 +14,11 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOriginPatterns(
-                                "http://127.0.0.1:*",
+                                "https://127.0.0.1:*",
                                 "http://localhost:*",
-                                "http://*.github.io",
-                                "http://joshua-pugh.github.io",
-                                "http://*.onrender.com"
+                                "https://*.github.io",
+                                "https://joshua-pugh.github.io",
+                                "https://*.onrender.com"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")

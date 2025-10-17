@@ -15,7 +15,7 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOriginPatterns(
                                 "https://127.0.0.1:*",
-                                "http://localhost:*",
+                                "https://localhost:*",
                                 "https://*.github.io",
                                 "https://joshua-pugh.github.io",
                                 "https://*.onrender.com"

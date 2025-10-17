@@ -13,11 +13,17 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(
-                                "http://localhost:3000",
-                                "https://your-frontend.onrender.com"
+                        .allowedOriginPatterns(
+                                "http://127.0.0.1:*",
+                                "http://localhost:*",
+                                "http://*.github.io",
+                                "http://joshua-pugh.github.io",
+                                "http://*.onrender.com"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .exposedHeaders()
+                        .allowCredentials(false);
             }
         };
     }
